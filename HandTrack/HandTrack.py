@@ -1,6 +1,5 @@
 import dlib
 import cv2
-import time
 
 detector = dlib.simple_object_detector('hand.svm')
 
@@ -10,7 +9,6 @@ cap = cv2.VideoCapture(0)
 rscale = 2.0
 
 while (True):
-    start_time = time.time()
     ret, frame = cap.read()
     width, height, _ = frame.shape
 
